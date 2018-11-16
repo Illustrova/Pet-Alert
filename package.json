@@ -1,0 +1,11 @@
+{
+  "name": "cs50w-project0",
+  "version": "1.0.0",
+  "description": "Project 0 for CS50w course - a static template for Pet Alert app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Irina Illustrova",
+  "license": "ISC"
+}
