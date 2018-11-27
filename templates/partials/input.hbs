@@ -1,0 +1,11 @@
+<div class="form-group{{#ifeq data "checkbox"}} form-check form-check-inline{{/ifeq}}
+    {{#if hide}} hide-{{hide}}{{/if}}">
+    <label {{#ifeq data "checkbox"}}class="form-check-label" {{/ifeq}}for="{{id}}">{{label}}{{#if required}} *{{/if}}</label>
+    <input {{#ifeq data "checkbox"}}class="form-check-input order-first" {{/ifeq}}type="{{#if data}}{{data}}{{else}}text{{/if}}" class="form-control {{data}}"
+        id="{{id}}"
+        {{#if placeholder}} placeholder="{{placeholder}}"{{/if}}
+        {{#if sublabel}} aria-describedby="{{id}}-described"
+        {{#if required}} required{{/if}}>
+        <small id="{{id}}-described" class="form-text text-muted">{{sublabel}}</small>
+        {{else}}>{{/if}}
+</div>

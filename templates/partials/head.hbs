@@ -1,0 +1,6 @@
+<title>{{title}}</title>
+{{#each head.stylesheet}}
+<link rel="stylesheet" href="{{href}}" {{#if integrity}} integrity="{{integrity}}" {{/if}} {{#if crossorigin}}
+    crossorigin="{{crossorigin}}" {{/if}}>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC|Open+Sans|Roboto" rel="stylesheet">
+{{/each}}

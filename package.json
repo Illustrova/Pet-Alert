@@ -4,8 +4,36 @@
   "description": "Project 0 for CS50w course - a static template for Pet Alert app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm-run-all --parallel watch:*",
+    "watch:css": "onchange styles/*.scss -- npm run build:css",
+    "watch:html": "onchange templates/*.hbs -- npm run build:html {{changed}}",
+    "watch:serve": "browser-sync --server \"dist/\" start --files \"**/*.html\" \"**/*.css\"",
+    "build:html": "node tasks/hbCompile.js",
+    "build:css": "mkdirp dist/css && node-sass --include-path styles styles/main.scss dist/css/main.css",
+    "build:js": "ncp js dist/js",
+    "build:images": "mkdirp dist/assets && npm run build:logo && node tasks/resizeImages.js 'assets/pets/*.jpg' 'dist/assets/pets' && imagemin dist/assets/**/* --out-dir=dist/assets",
+    "build:logo": "mkdirp dist/assets && ncp assets/logo/ dist/assets",
+    "build": "npm-run-all --parallel build:*"
+    
   },
   "author": "Irina Illustrova",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "handlebars-layouts": "^3.1.4",
+    "imagemin": "^6.0.0",
+    "ncp": "^2.0.0",
+    "node-watch": "^0.5.8"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "imagemin-cli": "^4.0.0",
+    "mkdirp-promise": "^5.0.1",
+    "node-sass": "^4.10.0",
+    "npm-run-all": "^4.1.3",
+    "onchange": "^5.1.0",
+    "sharp": "^0.21.0",
+    "uglify-js": "^3.4.9",
+    "uglifyjs": "^2.4.11"
+  }
 }

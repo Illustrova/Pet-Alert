@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Alert - recently found pets</title>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family&#x3D;Open+Sans"  >
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"  
+                crossorigin="anonymous" >
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"  integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"  
+                crossorigin="anonymous" >
+            <link rel="stylesheet" href="css/main.css"  >
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid mt-2">
+            <div class="row d-none d-md-block text-center">
+                <a href="/">
+                    <img src="assets/petalert_md.png" width="60" height="60" alt="Pet Alert">
+                </a>
+            </div>
+            <nav class="navbar navbar-light navbar-expand-md justify-content-center">
+                <a href="/" class="navbar-brand mr-0 d-md-none">
+                    <img src="assets/petalert_sm.png" width="30" height="30" alt="Pet Alert">
+                </a>
+                <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse justify-content-between align-items-center w-100 my-2" id="collapsingNavbar">
+                    <ul class="navbar-nav mx-auto mb-3 text-center">
+                        <li class="nav-item mx-4">
+                            <a class="nav-link link--accent p-0 m-2" href="/missing.html">Missing</a>
+                        </li>
+                        <li class="nav-item active mx-4">
+                            <a class="nav-link link--accent p-0 m-2" href="/found.html">Found<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link link--accent p-0 m-2" href="/create.html">Create alert</a>
+                        </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link link--accent p-0 m-2" href="/about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>    <main role="main">
+    <div class="container-fluid">
+        <div class="row pets--found">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <article class="card h-100 pets--found">
+                <img class="card-img-top" src="assets/pets/guinea1.jpg" alt="Missing guinea pig, Guinea from Parko Filothei">
+                <div class="card-body pb-0">
+                    <h5 class="card-title text-uppercase">found guinea pig</h5>
+                    <ul class="card-text list-unstyled">
+                        <li>
+                            <span class="font-weight-bold">Breed:</span>
+                            Guinea
+                        </li>
+                        <li>
+                            <span class="font-weight-bold">Color:</span>
+                            brown, white
+                        </li>
+                    </ul>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item py-2 px-0">
+                            <i class="fas fa-calendar"></i>
+                            2018-11-18
+                        </li>
+                        <li class="list-group-item py-2 px-0">
+                            <i class="fas fa-map-marker"></i>
+                            Parko Filothei
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent mt-auto border-top-0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="card-link link--accent">Details</a>
+                        <a href="#" class="btn btn-success--animated">This is my pet</a>
+                    </div>
+                </div>
+            </article>            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <article class="card h-100 pets--found">
+                <img class="card-img-top" src="assets/pets/cat2.jpg" alt="Missing cat,  from Plateia Nea Smyrni">
+                <div class="card-body pb-0">
+                    <h5 class="card-title text-uppercase">found cat</h5>
+                    <ul class="card-text list-unstyled">
+                        <li>
+                            <span class="font-weight-bold">Color:</span>
+                            brown
+                        </li>
+                    </ul>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item py-2 px-0">
+                            <i class="fas fa-calendar"></i>
+                            2018-11-20
+                        </li>
+                        <li class="list-group-item py-2 px-0">
+                            <i class="fas fa-map-marker"></i>
+                            Plateia Nea Smyrni
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent mt-auto border-top-0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="card-link link--accent">Details</a>
+                        <a href="#" class="btn btn-success--animated">This is my pet</a>
+                    </div>
+                </div>
+            </article>            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <article class="card h-100 pets--found">
+                <img class="card-img-top" src="assets/pets/dog5.jpg" alt="Missing dog, none from Tzami Karatasou 20">
+                <div class="card-body pb-0">
+                    <h5 class="card-title text-uppercase">found dog</h5>
+                    <ul class="card-text list-unstyled">
+                        <li>
+                            <span class="font-weight-bold">Breed:</span>
+                            none
+                        </li>
+                        <li>
+                            <span class="font-weight-bold">Color:</span>
+                            black
+                        </li>
+                    </ul>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item py-2 px-0">
+                            <i class="fas fa-calendar"></i>
+                            2018-11-25
+                        </li>
+                        <li class="list-group-item py-2 px-0">
+                            <i class="fas fa-map-marker"></i>
+                            Tzami Karatasou 20
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent mt-auto border-top-0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="card-link link--accent">Details</a>
+                        <a href="#" class="btn btn-success--animated">This is my pet</a>
+                    </div>
+                </div>
+            </article>            </div>
+        </div>
+    </div>
+    </main>
+    <footer class="container-fluid footer py-3 mt-4">
+        <nav class="nav justify-content-center">
+            <a class="nav-link mx-4" href="missing">Missing</a>
+            <a class="nav-link mx-4" href="found">Found</a>
+            <a class="nav-link mx-4" href="create">Create alert</a>
+            <a class="nav-link mx-4" href="about">About</a>
+        </nav>
+        <ul class="nav justify-content-center social--links">
+            <li class="nav-item">
+                <a class="nav-link active" title="Facebook" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" title="Twitter" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" title="Instagram" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </div></body>
+
+</html>

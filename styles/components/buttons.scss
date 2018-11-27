@@ -1,0 +1,71 @@
+.btn-success--animated {
+    background-color: white;
+    color: $success;
+    border: solid $btn-border-width $success;
+    padding: 0.5em;
+    border-radius: $btn-border-radius;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        background: #fff;
+        position: absolute;
+        width: $btn-border-width+6px;
+        height: $btn-border-width;
+        background-color: white;
+        transition: all 1s ease-in;
+    }
+    &:before {
+        bottom: -$btn-border-width;
+        left: 7%;
+    }
+    &:after {
+        top: -$btn-border-width;
+        right: 7%;
+    }
+    &:hover {
+        background-color: white;
+        color: $success;
+    }
+    &:hover:before {
+        left: 75%;
+        width: 0;
+    }
+    &:hover:after {
+        right: 80%;
+        width: 0;
+    }
+    &:not(:disabled):active {
+        //Keep it at the beginning for correct rendering
+        &:before,
+        &:after {
+            display: none;
+        }
+        background-color: $success;
+        color: white;
+    }
+}
+
+.btn-primary {
+    background-color: $primary !important;
+    border-color: $primary !important;
+    @include active-state($primary);
+}
+
+.btn-success {
+    background-color: $success !important;
+    border-color: $success !important;
+    @include active-state($success);
+}
+
+.radio-hide {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
