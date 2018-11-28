@@ -13,6 +13,10 @@ i {
   background-color: #e24e42;
   height: 2px; }
 
+@media (max-width: 600px) {
+  .heading-deco {
+    visibility: hidden; } }
+
 html {
   font-size: 87.5%; }
 

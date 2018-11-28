@@ -16,3 +16,9 @@ i {
     background-color: $primary;
     height: 2px;
 }
+
+@media (max-width: 600px) {
+    .heading-deco {
+        visibility: hidden;
+    }
+}
