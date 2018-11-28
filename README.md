@@ -6,7 +6,7 @@ This is a front-end part for the future app, Pet Alert, which is to be continued
 
 ## Getting Started
 
-- Clone this repo: `git clone https://github.com/Illustrova/Kindergarten-Finder-React`
+- Clone this repo: `git clone https://github.com/Illustrova/CS50w-project0`
 - Install dependencies: `npm install`
 - Build App: `npm run build`
 - Serve locally: `npm start`
