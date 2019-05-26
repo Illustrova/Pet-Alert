@@ -1,11 +1,4 @@
-@import "abstracts/mixins.scss",
-"abstracts/variables.scss",
-"base/base.scss",
-"base/typography.scss",
-"layout/footer.scss",
-"components/buttons.scss",
-"components/links.scss",
-"components/badges.scss",
-"components/dropimage.scss",
-"components/card.scss",
-"pages/create.scss";
+@import 'abstracts/mixins.scss', 'abstracts/variables.scss', 'base/base.scss',
+	'base/typography.scss', 'layout/footer.scss', 'components/buttons.scss',
+	'components/links.scss', 'components/badges.scss', 'components/dropimage.scss',
+	'components/card.scss', 'pages/create.scss';

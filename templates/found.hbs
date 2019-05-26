@@ -1,13 +1,13 @@
 {{#extend "layout" page="found"}}
-{{#content "main"}}
-    <div class="container-fluid">
-        <div class="row pets--found">
-            {{#each ads.found}}
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-            {{> card type="found" btn-success-text="This is my pet" }}
-            </div>
-            {{/each}}
-        </div>
-    </div>
-{{/content}}
+	{{#content "main"}}
+		<div class="container-fluid">
+			<div class="row pets--found">
+				{{#each ads.found}}
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+						{{> card type="found" btn-success-text="This is my pet" }}
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	{{/content}}
 {{/extend}}

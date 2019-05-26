@@ -1,16 +1,16 @@
-<footer class="container-fluid footer py-3 mt-4">
-    <nav class="nav justify-content-center">
-        {{#each nav}}
-        <a class="nav-link mx-4" href="{{link}}">{{title}}</a>
-        {{/each}}
-    </nav>
-    <ul class="nav justify-content-center social--links">
-        {{#each social}}
-        <li class="nav-item">
-            <a class="nav-link active" title="{{name}}" href="{{link}}" target="_blank" rel="noopener noreferrer">
-                <i class="{{icon}}"></i>
-            </a>
-        </li>
-        {{/each}}
-    </ul>
-</div>
+<footer class="container-fluid footer py-3 mt-auto">
+	<nav class="nav justify-content-center">
+		{{#each nav}}
+			<a class="nav-link mx-4" href="{{link}}.html">{{title}}</a>
+		{{/each}}
+	</nav>
+	<ul class="nav justify-content-center social--links">
+		{{#each social}}
+			<li class="nav-item">
+				<a class="nav-link active" title="{{name}}" href="{{link}}" target="_blank" rel="noopener noreferrer">
+					<i class="{{icon}}"></i>
+				</a>
+			</li>
+		{{/each}}
+	</ul>
+	</div>

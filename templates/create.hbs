@@ -1,24 +1,29 @@
 {{#extend "layout" page="create"}}
-{{#content "main"}}
-    <div class="container">
-        <form id="alertForm" class="missing">
-            <div class="row text-center">
-                {{> toggler-button}}
-            </div>
-            <div class="row">
-                <div class="col-12 col-sm-6">
-                    {{#each forms.fields}}
-                    {{> (lookup . "type") }}
-                    {{/each}}
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="d-flex flex-column">
-                        <div id="result" class="order-last order-sm-first"></div>
-                        {{> dropimage}}
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-{{/content}}
+	{{#content "main"}}
+		<div class="container-fluid py-3">
+			<form id="alertForm" class="missing">
+				<div class="row text-center">
+					{{> toggler-button}}
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-6">
+						{{#each forms.fields}}
+							{{> (lookup . "type") }}
+						{{/each}}
+					</div>
+					<div class="col-12 col-sm-6">
+						<div class="d-flex flex-column">
+							<div id="result" class="order-last order-sm-first"></div>
+							{{> dropimage}}
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<button class="btn btn-lg btn-primary" type="submit">Post alert</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	{{/content}}
 {{/extend}}

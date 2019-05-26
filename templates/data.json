@@ -1,440 +1,504 @@
 {
-   "head":{
-        "stylesheet": [
-            {
-                "href": "https://fonts.googleapis.com/css?family=Open+Sans"
-            },
-            {
-                "href":"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
-                "integrity": "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO",
-                "crossorigin": "anonymous"
-            },
-            {
-                "href": "https://use.fontawesome.com/releases/v5.5.0/css/all.css",
-                "integrity": "sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU",
-                "crossorigin": "anonymous"
-            },
-            {
-                "href": "css/main.css"
-            }
-        ],
-        "script": []
-   },
-   "pages": {
-        "index": {
-            "title": "Pet Alert - find your missing pet"
-        },
-        "missing": {
-            "title": "Pet Alert - missing pets listings"
-        },
-        "found": {
-            "title": "Pet Alert - recently found pets"
-        },
-        "create": {
-            "title": "Pet Alert - create new alert",
-            "head": {
-                "stylesheet": [],
-                "script": [
-                    {
-                        "src": "https://code.jquery.com/jquery-3.3.1.slim.min.js",
-                        "integrity": "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo",
-                        "crossorigin":"anonymous"
-                    },
-                    {
-                        "src": "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
-                        "integrity": "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy",
-                        "crossorigin": "anonymous"
-                    },
-                    {
-                        "src": "/js/create.js"
-                    }
-                ]
-            }
-        },
-        "about": {
-            "title": "Pet Alert - about us"
-        }
-    },
-    "logo": {
-        "sm": {
-            "src": "assets/petalert_sm.png",
-            "width": 30,
-            "height": 30,
-            "alt": "Pet Alert"
-        },
-        "md": {
-            "src": "assets/petalert_md.png",
-            "width": 60,
-            "height": 60,
-            "alt": "Pet Alert"
-        }
-    },
-    "nav": [
-        {
-            "title": "Missing",
-            "link": "missing"
-        },
-        {
-            "title": "Found",
-            "link": "found"
-        },
-        {
-            "title": "Create alert",
-            "link": "create"
-        },
-        {
-            "title": "About",
-            "link": "about"
-        }
-    ],
-    "social": [
-        {
-            "name": "Facebook",
-            "link": "https://www.facebook.com",
-            "icon": "fab fa-facebook"
-        },
-        {
-            "name": "Twitter",
-            "link": "https://www.twitter.com",
-            "icon": "fab fa-twitter"
-        },
-        {
-            "name": "Instagram",
-            "link": "https://www.instagram.com",
-            "icon": "fab fa-instagram"
-        }
-    ],
-    "forms": {
-        "fields": [
-            {
-                "id": "pet",
-                "type": "input",
-                "label": "Pet kind",
-                "sublabel": "What kind of pet is lost?",
-                "placeholder": "e.g. dog, cat, fish...?",
-                "required": true
-            },
-            {
-                "id": "nickname",
-                "type": "input",
-                "label": "Nickname",
-                "sublabel": "Fill it if there is a chance a pet will respond to its nickname",
-                "placeholder": "e.g. Jackie",
-                "hide": "found"
-            },
-            {
-                "id": "breed",
-                "type": "input",
-                "label": "Breed",
-                "sublabel": "If applicable",
-                "placeholder": "e.g. German shepherd"
-            },
-            {
-                "id": "age",
-                "type": "input",
-                "data": "number",
-                "label": "Age",
-                "sublabel": "More or less",
-                "placeholder": "7",
-                "hide": "found"
-            },
-            {
-                "id": "color",
-                "type": "input",
-                "label": "Color",
-                "sublabel": "Only main colors. For more detailed description use the field below",
-                "placeholder": "Black and white"
-            },
-            {
-                "id": "description",
-                "type": "textarea",
-                "label": "Pet description",
-                "sublabel": "Describe in details how your pet looks. Does it have special signs or wears a collar?"
-            },
-            {
-                "id": "behaviour",
-                "type": "textarea",
-                "label": "Pet behaviour",
-                "sublabel": "Describe your pet's typical behaviour. Can it be dangerous? Or it afraids of people? Should one try to catch it?",
-                "hide": "found"
-            },
-            {
-                "id": "seen_date",
-                "type": "input",
-                "data": "date",
-                "label": "Date",
-                "required": true
-            },
-            {
-                "id": "seen_location",
-                "type": "input",
-                "label": "Location",
-                "sublabel": "Specify area at least, ideally type the exact address. This is very important information!",
-                "required": true
-            },
-            {
-                "id": "seen_details",
-                "type": "textarea",
-                "label": "Details",
-                "sublabel": "Provide more details if needed"
-            },
-            {
-                "id": "contacts_phone",
-                "type": "input",
-                "data": "phone",
-                "label": "Phone"
-            },
-            {
-                "id": "contacts_landline",
-                "type": "input",
-                "data": "phone",
-                "label": "Landline",
-                "sublabel": "or any additional phone"
-            },
-            {
-                "id": "contacts_email",
-                "type": "input",
-                "data":"email",
-                "label": "Email",
-                "required": true
-            },
-            {
-                "id": "reward",
-                "type": "input",
-                "data": "checkbox",
-                "label": "Do you offer reward? ",
-                "hide": "found"
-            },
-            {
-                "id": "reward-amount",
-                "type": "input",
-                "data": "number",
-                "placeholder": 100,
-                "label": "Reward amount (Euro)",
-                "sublabel": "This is not necessary to include, but this information can attract more attention to your alert",
-                "hide": "found"
-            }
-        ]
-    },
-
-    "ads":{
-        "lost": [
-            {
-                "pet": "dog",
-                "nickname": "Jackie",
-                "breed": "German Shepherd",
-                "age": 7,
-                "color": "black and beige",
-                "description": "",
-                "seen": {
-                    "date": "2018-11-18",
-                    "location": "Kipseli",
-                    "details": ""
-                },
-                "behaviour": "",
-                "contacts": {
-                    "phone": "+30 699 667 90 76",
-                    "landline": "+30 210 123 45 67",
-                    "email": "illustrova@gmail.com"
-                },
-                "reward": {
-                    "offered": true,
-                    "amount": "200"
-                },
-                "img": {
-                    "main": "assets/pets/dog1.jpg",
-                    "other": []
-                },
-                "date_posted": "2018-11-18 10:07:50"
-            },
-            {
-                "pet": "dog",
-                "nickname": "Bart",
-                "breed": "Golden Retriver",
-                "age": 3,
-                "color": "light",
-                "description": "",
-                "seen": {
-                    "date": "2018-11-19",
-                    "location": "Zalokosta 41, Chalandri",
-                    "details": "Ran away following a cat"
-                },
-                "behaviour": "Friendly, loves kids, recognizes his name",
-                "contacts": {
-                    "phone": "+30 699 667 90 76",
-                    "email": "illustrova@gmail.com"
-                },
-                "reward": {
-                    "offered": false
-                },
-                "img": {
-                    "main": "assets/pets/dog2.jpg",
-                    "other": []
-                },
-                "date_posted": "2018-11-19 12:27:50"
-            },
-            {
-                "pet": "dog",
-                "nickname": "Mike",
-                "age": 4,
-                "color": "white and brown with black spot on the tail",
-                "description": "Wears collar with name and phone",
-                "seen": {
-                    "date": "2018-11-19",
-                    "location": "Markou Mpotsari 48, Neos Kosmos",
-                    "details": "Was stolen from the supermarket entrance"
-                },
-                "behaviour": "Can be agressive with strangers, don't try to catch, call us asap if you see him",
-                "contacts": {
-                    "phone": "+30 699 667 90 76",
-                    "email": "illustrova@gmail.com"
-                },
-                "reward": {
-                    "offered": false
-                },
-                "img": {
-                    "main": "assets/pets/dog3.jpg",
-                    "other": []
-                },
-                "date_posted": "2018-11-19 12:27:50"
-            },
-            {
-                "pet": "cat",
-                "nickname": "Boss",
-                "breed": "Himalayan",
-                "color": "dark grey",
-                "description": "weight approximately 8 kilos, wears anti-insect collar",
-                "seen": {
-                    "date": "2018-11-20",
-                    "location": "Patriarchou Grigoriou 20, Neos Kosmos",
-                    "details": "Left through open window in the morning, never left home before"
-                },
-                "behaviour": "Never was outside before, probably got lost in the neighbourhood. Can be agressive, but likely will approach for food",
-                "contacts": {
-                    "phone": "+30 699 667 90 76",
-                    "email": "illustrova@gmail.com"
-                },
-                "reward": {
-                    "offered": false
-                },
-                "img": {
-                    "main": "assets/pets/cat1.jpg",
-                    "other": []
-                },
-                "date_posted": "2018-11-20 18:21:30"
-            },
-            {
-                "pet": "dog",
-                "nickname": "Beam",
-                "breed": "husky",
-                "description": "",
-                "seen": {
-                    "date": "2018-11-20",
-                    "location": "Kifissia square",
-                    "details": ""
-                },
-                "behaviour": "Afraids of strangers",
-                "contacts": {
-                    "phone": "+30 699 667 90 76",
-                    "email": "illustrova@gmail.com"
-                },
-                "reward": {
-                    "offered": true,
-                    "amount": 500
-                },
-                "img": {
-                    "main": "assets/pets/dog4.jpg",
-                    "other": []
-                },
-                "date_posted": "2018-11-19 12:27:50"
-            },
-            {
-                "pet": "parrot",
-                "nickname": "Johnny Walker",
-                "breed": "macaw",
-                "color": "yellow-blue with a little red",
-                "description": "85cm tall, with very long tail. Yellow body, red head and tail is blue with some red. Shouts loudly, and can say \"I am Johnny\"",
-                "seen": {
-                    "date": "2018-11-22",
-                    "location": "Karaoli Dimitriou 1, Chalandri",
-                    "details": "Flew out of the window"
-                },
-                "behaviour": "Flies only very short distances, doesn't trust people",
-                "contacts": {
-                    "phone": "+30 699 667 90 76",
-                    "email": "illustrova@gmail.com"
-                },
-                "reward": {
-                    "offered": false
-                },
-                "img": {
-                    "main": "assets/pets/parrot1.jpg",
-                    "other": []
-                },
-                "date_posted": "2018-11-22 22:27:50"
-            }
-        ],
-        "found": [
-            {
-                "pet": "guinea pig",
-                "breed": "Guinea",
-                "color": "brown, white",
-                "description": "",
-                "seen": {
-                    "date": "2018-11-18",
-                    "location": "Parko Filothei",
-                    "details": "Was found in the park next to the playground"
-                },
-                "contacts": {
-                    "email": "illustrova@gmail.com"
-                },
-                "img": {
-                    "main": "assets/pets/guinea1.jpg",
-                    "other": []
-                },
-                "date_posted": "2018-11-22 12:07:50"
-            },
-            {
-                "pet": "cat",
-                "breed": "",
-                "color": "brown",
-                "description": "Young female cat. Wears a collar, but the text is not readable",
-                "seen": {
-                    "date": "2018-11-20",
-                    "location": "Plateia Nea Smyrni",
-                    "details": ""
-                },
-                "contacts": {
-                    "phone": "+30 699 667 90 76",
-                    "landline": "+30 210 123 45 67",
-                    "email": "illustrova@gmail.com"
-                },
-                "img": {
-                    "main": "assets/pets/cat2.jpg",
-                    "other": []
-                },
-                "date_posted": "2018-11-21 17:07:50"
-            }, {
-                "pet": "dog",
-                "breed": "none",
-                "color": "black",
-                "description": "Male dog around 15 kilos, left front leg is injured",
-                "seen": {
-                    "date": "2018-11-25",
-                    "location": "Tzami Karatasou 20",
-                    "details": ""
-                },
-                "contacts": {
-                    "phone": "+30 699 667 90 76",
-                    "landline": "+30 210 123 45 67",
-                    "email": "illustrova@gmail.com"
-                },
-                "img": {
-                    "main": "assets/pets/dog5.jpg",
-                    "other": []
-                },
-                "date_posted": "2018-11-25 23:08:50"
-            }
-        ]
-    }
+	"head": {
+		"stylesheet": [
+			{
+				"href": "https://fonts.googleapis.com/css?family=Open+Sans"
+			},
+			{
+				"href": "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
+				"integrity": "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO",
+				"crossorigin": "anonymous"
+			},
+			{
+				"href": "https://use.fontawesome.com/releases/v5.5.0/css/all.css",
+				"integrity": "sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU",
+				"crossorigin": "anonymous"
+			},
+			{
+				"href": "css/main.css"
+			}
+		],
+		"script": []
+	},
+	"pages": {
+		"index": {
+			"title": "Pet Alert - find your missing pet",
+			"head": {
+				"script": [
+					{
+						"src": "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+						"integrity": "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo",
+						"crossorigin": "anonymous"
+					},
+					{
+						"src": "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
+						"integrity": "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy",
+						"crossorigin": "anonymous"
+					}
+				]
+			}
+		},
+		"missing": {
+			"title": "Pet Alert - missing pets listings",
+			"head": {
+				"script": [
+					{
+						"src": "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+						"integrity": "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo",
+						"crossorigin": "anonymous"
+					},
+					{
+						"src": "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
+						"integrity": "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy",
+						"crossorigin": "anonymous"
+					}
+				]
+			}
+		},
+		"found": {
+			"title": "Pet Alert - recently found pets",
+			"head": {
+				"script": [
+					{
+						"src": "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+						"integrity": "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo",
+						"crossorigin": "anonymous"
+					},
+					{
+						"src": "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
+						"integrity": "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy",
+						"crossorigin": "anonymous"
+					}
+				]
+			}
+		},
+		"create": {
+			"title": "Pet Alert - create new alert",
+			"head": {
+				"stylesheet": [],
+				"script": [
+					{
+						"src": "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+						"integrity": "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo",
+						"crossorigin": "anonymous"
+					},
+					{
+						"src": "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
+						"integrity": "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy",
+						"crossorigin": "anonymous"
+					},
+					{
+						"src": "js/create.js"
+					}
+				]
+			}
+		},
+		"about": {
+			"title": "Pet Alert - about us",
+			"head": {
+				"script": [
+					{
+						"src": "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+						"integrity": "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo",
+						"crossorigin": "anonymous"
+					},
+					{
+						"src": "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
+						"integrity": "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy",
+						"crossorigin": "anonymous"
+					}
+				]
+			}
+		}
+	},
+	"logo": {
+		"sm": {
+			"src": "assets/petalert_sm.png",
+			"width": 30,
+			"height": 30,
+			"alt": "Pet Alert"
+		},
+		"md": {
+			"src": "assets/petalert_md.png",
+			"width": 60,
+			"height": 60,
+			"alt": "Pet Alert"
+		}
+	},
+	"nav": [
+		{
+			"title": "Missing",
+			"link": "missing"
+		},
+		{
+			"title": "Found",
+			"link": "found"
+		},
+		{
+			"title": "Create alert",
+			"link": "create"
+		},
+		{
+			"title": "About",
+			"link": "about"
+		}
+	],
+	"social": [
+		{
+			"name": "Facebook",
+			"link": "https://www.facebook.com",
+			"icon": "fab fa-facebook"
+		},
+		{
+			"name": "Twitter",
+			"link": "https://www.twitter.com",
+			"icon": "fab fa-twitter"
+		},
+		{
+			"name": "Instagram",
+			"link": "https://www.instagram.com",
+			"icon": "fab fa-instagram"
+		}
+	],
+	"forms": {
+		"fields": [
+			{
+				"id": "pet",
+				"type": "input",
+				"label": "Pet kind",
+				"sublabel": "What kind of pet is lost?",
+				"placeholder": "e.g. dog, cat, fish...?",
+				"required": true
+			},
+			{
+				"id": "nickname",
+				"type": "input",
+				"label": "Nickname",
+				"sublabel": "Fill it if there is a chance a pet will respond to its nickname",
+				"placeholder": "e.g. Jackie",
+				"hide": "found"
+			},
+			{
+				"id": "breed",
+				"type": "input",
+				"label": "Breed",
+				"sublabel": "If applicable",
+				"placeholder": "e.g. German shepherd"
+			},
+			{
+				"id": "age",
+				"type": "input",
+				"data": "number",
+				"max": "25",
+				"min": "0",
+				"label": "Age",
+				"sublabel": "More or less",
+				"placeholder": "7",
+				"hide": "found"
+			},
+			{
+				"id": "color",
+				"type": "input",
+				"label": "Color",
+				"sublabel": "Only main colors. For more detailed description use the field below",
+				"placeholder": "Black and white"
+			},
+			{
+				"id": "description",
+				"type": "textarea",
+				"label": "Pet description",
+				"sublabel": "Describe in details how your pet looks. Does it have special signs or wears a collar?"
+			},
+			{
+				"id": "behaviour",
+				"type": "textarea",
+				"label": "Pet behaviour",
+				"sublabel": "Describe your pet's typical behaviour. Can it be dangerous? Or it afraids of people? Should one try to catch it?",
+				"hide": "found"
+			},
+			{
+				"id": "seen_date",
+				"type": "input",
+				"data": "date",
+				"label": "Date",
+				"required": true
+			},
+			{
+				"id": "seen_location",
+				"type": "input",
+				"label": "Location",
+				"sublabel": "Specify area at least, ideally type the exact address. This is very important information!",
+				"required": true
+			},
+			{
+				"id": "seen_details",
+				"type": "textarea",
+				"label": "Details",
+				"sublabel": "Provide more details if needed"
+			},
+			{
+				"id": "contacts_phone",
+				"type": "input",
+				"data": "phone",
+				"label": "Phone",
+				"pattern": "^[0-9-+s()]*$"
+			},
+			{
+				"id": "contacts_landline",
+				"type": "input",
+				"data": "phone",
+				"label": "Landline",
+				"sublabel": "or any additional phone",
+				"pattern": "^[0-9-+s()]*$"
+			},
+			{
+				"id": "contacts_email",
+				"type": "input",
+				"data": "email",
+				"label": "Email",
+				"required": true
+			},
+			{
+				"id": "reward",
+				"type": "input",
+				"data": "checkbox",
+				"label": "Do you offer reward? ",
+				"hide": "found"
+			},
+			{
+				"id": "reward-amount",
+				"type": "input",
+				"data": "number",
+				"placeholder": 100,
+				"min": "0",
+				"max": "10000",
+				"step": "10",
+				"label": "Reward amount (Euro)",
+				"sublabel": "This is not necessary to include, but this information can attract more attention to your alert",
+				"hide": "all"
+			}
+		]
+	},
+	
+	"ads": {
+		"lost": [
+			{
+				"pet": "dog",
+				"nickname": "Jackie",
+				"breed": "German Shepherd",
+				"age": 7,
+				"color": "black and beige",
+				"description": "",
+				"seen": {
+					"date": "2018-11-18",
+					"location": "Kipseli",
+					"details": ""
+				},
+				"behaviour": "",
+				"contacts": {
+					"phone": "+30 699 667 90 76",
+					"landline": "+30 210 123 45 67",
+					"email": "illustrova@gmail.com"
+				},
+				"reward": {
+					"offered": true,
+					"amount": "200"
+				},
+				"img": {
+					"main": "assets/pets/dog1.jpg",
+					"other": []
+				},
+				"date_posted": "2018-11-18 10:07:50"
+			},
+			{
+				"pet": "dog",
+				"nickname": "Bart",
+				"breed": "Golden Retriver",
+				"age": 3,
+				"color": "light",
+				"description": "",
+				"seen": {
+					"date": "2018-11-19",
+					"location": "Zalokosta 41, Chalandri",
+					"details": "Ran away following a cat"
+				},
+				"behaviour": "Friendly, loves kids, recognizes his name",
+				"contacts": {
+					"phone": "+30 699 667 90 76",
+					"email": "illustrova@gmail.com"
+				},
+				"reward": {
+					"offered": false
+				},
+				"img": {
+					"main": "assets/pets/dog2.jpg",
+					"other": []
+				},
+				"date_posted": "2018-11-19 12:27:50"
+			},
+			{
+				"pet": "dog",
+				"nickname": "Mike",
+				"age": 4,
+				"color": "white and brown with black spot on the tail",
+				"description": "Wears collar with name and phone",
+				"seen": {
+					"date": "2018-11-19",
+					"location": "Markou Mpotsari 48, Neos Kosmos",
+					"details": "Was stolen from the supermarket entrance"
+				},
+				"behaviour": "Can be agressive with strangers, don't try to catch, call us asap if you see him",
+				"contacts": {
+					"phone": "+30 699 667 90 76",
+					"email": "illustrova@gmail.com"
+				},
+				"reward": {
+					"offered": false
+				},
+				"img": {
+					"main": "assets/pets/dog3.jpg",
+					"other": []
+				},
+				"date_posted": "2018-11-19 12:27:50"
+			},
+			{
+				"pet": "cat",
+				"nickname": "Boss",
+				"breed": "Himalayan",
+				"color": "dark grey",
+				"description": "weight approximately 8 kilos, wears anti-insect collar",
+				"seen": {
+					"date": "2018-11-20",
+					"location": "Patriarchou Grigoriou 20, Neos Kosmos",
+					"details": "Left through open window in the morning, never left home before"
+				},
+				"behaviour": "Never was outside before, probably got lost in the neighbourhood. Can be agressive, but likely will approach for food",
+				"contacts": {
+					"phone": "+30 699 667 90 76",
+					"email": "illustrova@gmail.com"
+				},
+				"reward": {
+					"offered": false
+				},
+				"img": {
+					"main": "assets/pets/cat1.jpg",
+					"other": []
+				},
+				"date_posted": "2018-11-20 18:21:30"
+			},
+			{
+				"pet": "dog",
+				"nickname": "Beam",
+				"breed": "husky",
+				"description": "",
+				"seen": {
+					"date": "2018-11-20",
+					"location": "Kifissia square",
+					"details": ""
+				},
+				"behaviour": "Afraids of strangers",
+				"contacts": {
+					"phone": "+30 699 667 90 76",
+					"email": "illustrova@gmail.com"
+				},
+				"reward": {
+					"offered": true,
+					"amount": 500
+				},
+				"img": {
+					"main": "assets/pets/dog4.jpg",
+					"other": []
+				},
+				"date_posted": "2018-11-19 12:27:50"
+			},
+			{
+				"pet": "parrot",
+				"nickname": "Johnny Walker",
+				"breed": "macaw",
+				"color": "yellow-blue with a little red",
+				"description": "85cm tall, with very long tail. Yellow body, red head and tail is blue with some red. Shouts loudly, and can say \"I am Johnny\"",
+				"seen": {
+					"date": "2018-11-22",
+					"location": "Karaoli Dimitriou 1, Chalandri",
+					"details": "Flew out of the window"
+				},
+				"behaviour": "Flies only very short distances, doesn't trust people",
+				"contacts": {
+					"phone": "+30 699 667 90 76",
+					"email": "illustrova@gmail.com"
+				},
+				"reward": {
+					"offered": false
+				},
+				"img": {
+					"main": "assets/pets/parrot1.jpg",
+					"other": []
+				},
+				"date_posted": "2018-11-22 22:27:50"
+			}
+		],
+		"found": [
+			{
+				"pet": "guinea pig",
+				"breed": "Guinea",
+				"color": "brown, white",
+				"description": "",
+				"seen": {
+					"date": "2018-11-18",
+					"location": "Parko Filothei",
+					"details": "Was found in the park next to the playground"
+				},
+				"contacts": {
+					"email": "illustrova@gmail.com"
+				},
+				"img": {
+					"main": "assets/pets/guinea1.jpg",
+					"other": []
+				},
+				"date_posted": "2018-11-22 12:07:50"
+			},
+			{
+				"pet": "cat",
+				"breed": "",
+				"color": "brown",
+				"description": "Young female cat. Wears a collar, but the text is not readable",
+				"seen": {
+					"date": "2018-11-20",
+					"location": "Plateia Nea Smyrni",
+					"details": ""
+				},
+				"contacts": {
+					"phone": "+30 699 667 90 76",
+					"landline": "+30 210 123 45 67",
+					"email": "illustrova@gmail.com"
+				},
+				"img": {
+					"main": "assets/pets/cat2.jpg",
+					"other": []
+				},
+				"date_posted": "2018-11-21 17:07:50"
+			},
+			{
+				"pet": "dog",
+				"breed": "none",
+				"color": "black",
+				"description": "Male dog around 15 kilos, left front leg is injured",
+				"seen": {
+					"date": "2018-11-25",
+					"location": "Tzami Karatasou 20",
+					"details": ""
+				},
+				"contacts": {
+					"phone": "+30 699 667 90 76",
+					"landline": "+30 210 123 45 67",
+					"email": "illustrova@gmail.com"
+				},
+				"img": {
+					"main": "assets/pets/dog5.jpg",
+					"other": []
+				},
+				"date_posted": "2018-11-25 23:08:50"
+			}
+		]
+	}
 }

@@ -1,33 +1,38 @@
 {
-  "name": "cs50w-project0",
-  "version": "1.0.0",
-  "description": "Project 0 for CS50w course - a static template for Pet Alert app",
-  "main": "index.js",
-  "scripts": {
-    "start": "npm-run-all --parallel watch:*",
-    "watch:css": "onchange styles/*.scss -- npm run build:css",
-    "watch:html": "onchange templates/*.hbs -- npm run build:html {{changed}}",
-    "watch:serve": "browser-sync --server \"dist/\" start --files \"**/*.html\" \"**/*.css\"",
-    "build:html": "node tasks/hbCompile.js",
-    "build:css": "mkdirp dist/css && node-sass --include-path styles styles/main.scss dist/css/main.css",
-    "build:js": "ncp js dist/js",
-    "build:images": "mkdirp dist/assets && npm run build:logo && node tasks/resizeImages.js 'assets/pets/*.jpg' 'dist/assets/pets' && imagemin dist/assets/**/* --out-dir=dist/assets",
-    "build:logo": "mkdirp dist/assets && ncp assets/logo/ dist/assets",
-    "build": "npm-run-all --parallel build:*"
-  },
-  "author": "Irina Illustrova",
-  "license": "ISC",
-  "dependencies": {
-    "handlebars": "^4.0.12",
-    "handlebars-layouts": "^3.1.4"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "imagemin-cli": "^4.0.0",
-    "node-sass": "^4.10.0",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^5.1.0",
-    "sharp": "^0.21.0",
-    "ncp": "^2.0.0"
-  }
+	"name": "cs50w-project0",
+	"version": "1.0.0",
+	"description": "Project 0 for CS50w course - a static template for Pet Alert app",
+	"main": "index.js",
+	"scripts": {
+		"start": "npm-run-all --parallel watch:*",
+		"watch:css": "onchange \"styles/**/*.scss\" -- npm run build:css",
+		"watch:html": "onchange \"templates/**/*.hbs\" -- npm run build:html {{changed}}",
+		"watch:js": "onchange \"js/**/*.js\" -- npm run build:js",
+		"watch:serve": "browser-sync --server \"dist/\" start --files \"**/*.html\" \"**/*.css\"",
+		"build:html": "node tasks/hbCompile.js",
+		"build:css": "mkdirp dist/css && node-sass --output-style compressed --include-path styles styles/main.scss dist/css/main.css",
+		"build:js": "ncp js dist/js",
+		"build:images": "mkdirp dist/assets && npm run build:logo && node tasks/resizeImages.js 'assets/pets/*.jpg' 'dist/assets/pets' && imagemin dist/assets/**/* --out-dir=dist/assets",
+		"build:logo": "mkdirp dist/assets && ncp assets/logo/ dist/assets",
+		"build": "npm-run-all --parallel build:*",
+				"deploy": "gh-pages -d dist"
+
+	},
+	"author": "Irina Illustrova",
+	"license": "ISC",
+	"dependencies": {
+		"handlebars": "^4.1.2",
+		"handlebars-layouts": "^3.1.4"
+	},
+	"devDependencies": {
+		"browser-sync": "^2.26.5",
+		"gh-pages": "^2.0.1",
+		"html-minifier": "^4.0.0",
+		"imagemin-cli": "^4.0.1",
+		"ncp": "^2.0.0",
+		"node-sass": "^4.12.0",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^6.0.0",
+		"sharp": "^0.21.3"
+	}
 }

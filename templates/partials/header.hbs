@@ -1,26 +1,29 @@
 <header>
-    <div class="container-fluid mt-2">
-        <div class="row d-none d-md-block text-center">
-            <a href="/">
-                <img src="{{logo.md.src}}" width="{{logo.md.width}}" height="{{logo.md.height}}" alt="{{logo.md.alt}}">
-            </a>
-        </div>
-        <nav class="navbar navbar-light navbar-expand-md justify-content-center">
-            <a href="/" class="navbar-brand mr-0 d-md-none">
-                <img src="{{logo.sm.src}}" width="{{logo.sm.width}}" height="{{logo.sm.height}}" alt="{{logo.sm.alt}}">
-            </a>
-            <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse justify-content-between align-items-center w-100 my-2" id="collapsingNavbar">
-                <ul class="navbar-nav mx-auto mb-3 text-center">
-                    {{#each nav}}
-                    <li class="nav-item{{#ifeq ../page link}} active{{/ifeq}} mx-4">
-                        <a class="nav-link link--accent p-0 m-2" href="/{{link}}.html">{{title}}{{#ifeq ../page link}}<span class="sr-only">(current)</span>{{/ifeq}}</a>
-                    </li>
-                    {{/each}}
-                </ul>
-            </div>
-        </nav>
-    </div>
+	<div class="container-fluid mt-2">
+		<div class="row d-none d-md-block text-center">
+			<a href="/">
+				<img src="{{logo.md.src}}" width="{{logo.md.width}}" height="{{logo.md.height}}" alt="{{logo.md.alt}}">
+			</a>
+		</div>
+		<nav class="navbar navbar-light navbar-expand-md justify-content-center">
+			<a href="/" class="navbar-brand mr-0 d-md-none">
+				<img src="{{logo.sm.src}}" width="{{logo.sm.width}}" height="{{logo.sm.height}}" alt="{{logo.sm.alt}}">
+			</a>
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100 my-2"
+				id="collapsingNavbar">
+				<ul class="navbar-nav mx-auto mb-3 text-center">
+					{{#each nav}}
+						<li class="nav-item{{#ifeq ../page link}} active{{/ifeq}} mx-4">
+							<a class="nav-link link--accent p-0 m-2"
+								href="/{{link}}.html">{{title}}{{#ifeq ../page link}}<span
+										class="sr-only">(current)</span>{{/ifeq}}</a>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		</nav>
+	</div>
 </header>

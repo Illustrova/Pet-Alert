@@ -1,13 +1,13 @@
 {{#extend "layout" page="missing"}}
-{{#content "main"}}
-    <div class="container-fluid">
-        <div class="row">
-            {{#each ads.lost}}
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-            {{> card type="missing" btn-success-text="I've seen it"}}
-            </div>
-            {{/each}}
-        </div>
-    </div>
-{{/content}}
+	{{#content "main"}}
+		<div class="container-fluid">
+			<div class="row">
+				{{#each ads.lost}}
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+						{{> card type="missing" btn-success-text="I've seen it"}}
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	{{/content}}
 {{/extend}}

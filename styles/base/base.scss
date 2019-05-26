@@ -1,24 +1,32 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin: 0 0 100px; /* bottom has to be the same as footer height */
+}
+
 a,
 a:hover {
-    color: $primary;
+	color: $primary;
 }
 
 i {
-    color: $primary;
+	color: $primary;
 }
 
 .text-success {
-    color: $success !important;
+	color: $success !important;
 }
 
 .heading-deco {
-    width: 100%;
-    background-color: $primary;
-    height: 2px;
+	width: 100%;
+	background-color: $primary;
+	height: 2px;
 }
 
 @media (max-width: 600px) {
-    .heading-deco {
-        visibility: hidden;
-    }
+	.heading-deco {
+		visibility: hidden;
+	}
 }

@@ -1,21 +1,21 @@
 .card {
-    border-color: $primary !important;
+	border-color: $primary !important;
 }
 
 .card-img-top {
-    width: 100% !important;
-    height: 200px !important;
-    object-fit: cover;
+	width: 100% !important;
+	height: 200px !important;
+	object-fit: cover;
 }
 
 .pets--found.card {
-    border-color: $success !important;
+	border-color: $success !important;
 }
 
 .pets--found h5 {
-    color: $success !important;
+	color: $success !important;
 }
 
 .pets--found i {
-    color: $success;
+	color: $success;
 }

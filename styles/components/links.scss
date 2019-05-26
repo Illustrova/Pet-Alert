@@ -1,22 +1,30 @@
 .link--accent {
-    text-decoration: none;
-    color: $primary;
-    position: relative;
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -0.5em;
-        width: 1em;
-        height: 2px;
-        background-color: $primary; // border-radius: 25% 25% 25% 25% / 40% 40% 40% 40%;
-        transition: all 0.7s ease-in;
-    }
-    &:hover, .active & {
-        color: $primary !important;
-        &:before {
-            width: 70%;
-        }
-    }
+	text-decoration: none;
+	color: $primary;
+	position: relative;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -0.5em;
+		width: 1em;
+		height: 2px;
+		background-color: $primary;
+		transition: all 0.7s ease-in;
+	}
+	&:hover,
+	.active & {
+		color: $primary !important;
+		&:before {
+			width: 70%;
+		}
+	}
 }
 
+@media (max-width: 768px) {
+	.link--accent:before,
+	.link--accent:hover:before,
+	.link--accent:active:before {
+		display: none;
+	}
+}

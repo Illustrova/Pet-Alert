@@ -1,49 +1,49 @@
 {{#extend "layout" page="index"}}
-{{#content "main"}}
-<div class="container-fluid">
-    <div class="row align-items-center my-3">
-        <div class="col-auto">
-            <h2>Stats</h2>
-        </div>
-        <div class="col heading-deco"></div>
-    </div>
-    <div class="row text-center">
-        <div class="col-12">
-            {{>stats}}
-        </div>
-    </div>
-    <div class="row align-items-center my-3">
-        <div class="col-auto">
-            <h2>Recently lost pets</h2>
-        </div>
-        <div class="col heading-deco"></div>
-        <div class="col-auto">
-            <a href="/missing">See all missing pets</a>
-        </div>
-    </div>
-    <div class="row">
-        {{#each_upto ads.lost 4}}
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            {{> card type="missing" btn-success-text="I've seen it"}}
-        </div>
-        {{/each_upto}}
-    </div>
-    <div class="row align-items-center my-3">
-        <div class="col-auto">
-            <h2>Recently found pets</h2>
-        </div>
-        <div class="col heading-deco"></div>
-        <div class="col-auto">
-            <a href="/found">See all found pets</a>
-        </div>
-    </div>
-    <div class="row">
-        {{#each_upto ads.found 4}}
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            {{> card type="found" btn-success-text="This is my pet"}}
-        </div>
-        {{/each_upto}}
-    </div>
-</div>
-{{/content}}
+	{{#content "main"}}
+		<div class="container-fluid">
+			<div class="row align-items-center my-3">
+				<div class="col-auto">
+					<h2>Recently lost pets</h2>
+				</div>
+				<div class="col heading-deco"></div>
+				<div class="col-auto">
+					<a href="/missing.html">See all missing pets</a>
+				</div>
+			</div>
+			<div class="row">
+				{{#each_upto ads.lost 4}}
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+						{{> card type="missing" btn-success-text="I've seen it"}}
+					</div>
+				{{/each_upto}}
+			</div>
+			<div class="row align-items-center my-3">
+				<div class="col-auto">
+					<h2>Recently found pets</h2>
+				</div>
+				<div class="col heading-deco"></div>
+				<div class="col-auto">
+					<a href="/found.html">See all found pets</a>
+				</div>
+			</div>
+			<div class="row">
+				{{#each_upto ads.found 4}}
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+						{{> card type="found" btn-success-text="This is my pet"}}
+					</div>
+				{{/each_upto}}
+			</div>
+			<div class="row align-items-center my-3">
+				<div class="col-auto">
+					<h2>Stats</h2>
+				</div>
+				<div class="col heading-deco"></div>
+			</div>
+			<div class="row text-center">
+				<div class="col-12">
+					{{>stats}}
+				</div>
+			</div>
+		</div>
+	{{/content}}
 {{/extend}}

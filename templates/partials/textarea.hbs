@@ -1,10 +1,9 @@
 <div class="form-group{{#if hide}} hide-{{hide}}{{/if}}">
-    <label for="{{id}}">{{label}}{{#if required}} *{{/if}}</label>
-    <textarea class="form-control" id="{{id}}" rows="{{#if rows}}{{rows}}{{else}}3{{/if}}"
-        {{#if placeholder}} placeholder="{{placeholder}}"{{/if}}
-        {{#if sublabel}} aria-describedby="{{id}}-described"{{/if}}
-        {{#if required}} required{{/if}}></textarea>
-    {{#if sublabel}}
-    <small id="{{id}}-described" class="form-text text-muted">{{sublabel}}</small>
-    {{/if}}
+	<label for="{{id}}">{{label}}{{#if required}} *{{/if}}</label>
+	<textarea class="form-control" id="{{id}}" rows="{{#if rows}}{{rows}}{{else}}3{{/if}}" {{#if placeholder}}
+		placeholder="{{placeholder}}" {{/if}} {{#if sublabel}} aria-describedby="{{id}}-described" {{/if}}
+		{{#if required}} required{{/if}}></textarea>
+	{{#if sublabel}}
+		<small id="{{id}}-described" class="form-text text-muted">{{sublabel}}</small>
+	{{/if}}
 </div>

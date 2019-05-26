@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>{{lookup (lookup pages page) "title"}}</title>
-        {{!-- Global scripts and styles --}}
-        {{#each head.stylesheet}}
-            <link rel="stylesheet" href="{{href}}" {{#if integrity}} integrity="{{integrity}}" {{/if}} {{#if crossorigin}}
-                crossorigin="{{crossorigin}}" {{/if}}>
-        {{/each}}
-        {{#each head.script}}
-            <script src="{{src}}" {{#if integrity}} integrity="{{integrity}}" {{/if}} {{#if crossorigin}} crossorigin="{{crossorigin}}"
-                {{/if}}></script>
-        {{/each}}
-        {{!-- Page specific scripts and styles --}}
-        {{#each (lookup (lookup (lookup pages page) "head") "stylesheet")}}
-            <link rel="stylesheet" href="{{href}}" {{#if integrity}} integrity="{{integrity}}" {{/if}} {{#if crossorigin}}
-                crossorigin="{{crossorigin}}" {{/if}}>
-        {{/each}}
-        {{#each (lookup (lookup (lookup pages page) "head") "script")}}
-            <script src="{{src}}" {{#if integrity}} integrity="{{integrity}}" {{/if}} {{#if crossorigin}} crossorigin="{{crossorigin}}"
-                {{/if}}></script>
-        {{/each}}
+	<title>{{lookup (lookup pages page) "title"}}</title>
+	{{!-- Global scripts and styles --}}
+	{{#each head.stylesheet}}
+		<link rel="stylesheet" href="{{href}}" {{#if integrity}} integrity="{{integrity}}" {{/if}} {{#if crossorigin}}
+			crossorigin="{{crossorigin}}" {{/if}}>
+	{{/each}}
+	{{#each head.script}}
+		<script src="{{src}}" {{#if integrity}} integrity="{{integrity}}" {{/if}} {{#if crossorigin}}
+			crossorigin="{{crossorigin}}" {{/if}}></script>
+	{{/each}}
+	{{!-- Page specific scripts and styles --}}
+	{{#each (lookup (lookup (lookup pages page) "head") "stylesheet")}}
+		<link rel="stylesheet" href="{{href}}" {{#if integrity}} integrity="{{integrity}}" {{/if}} {{#if crossorigin}}
+			crossorigin="{{crossorigin}}" {{/if}}>
+	{{/each}}
+	{{#each (lookup (lookup (lookup pages page) "head") "script")}}
+		<script src="{{src}}" {{#if integrity}} integrity="{{integrity}}" {{/if}} {{#if crossorigin}}
+			crossorigin="{{crossorigin}}" {{/if}}></script>
+	{{/each}}
 </head>
 
 <body>
-    {{> header page=page }}
-    <main role="main">
-        {{#block "main"}}
-        {{/block}}
-    </main>
-    {{>footer}}
+	{{> header page=page }}
+	<main role="main">
+		{{#block "main"}}
+		{{/block}}
+	</main>
+	{{>footer}}
 </body>
 
 </html>
