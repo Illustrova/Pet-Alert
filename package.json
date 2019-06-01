@@ -11,11 +11,11 @@
 		"watch:serve": "browser-sync --server \"dist/\" start --files \"**/*.html\" \"**/*.css\"",
 		"build:html": "node tasks/hbCompile.js",
 		"build:css": "mkdirp dist/css && node-sass --output-style compressed --include-path styles styles/main.scss dist/css/main.css",
-		"build:js": "ncp js dist/js",
+		"build:js": "mkdirp dist/js && ncp js dist/js",
 		"build:images": "mkdirp dist/assets && npm run build:logo && node tasks/resizeImages.js 'assets/pets/*.jpg' 'dist/assets/pets' && imagemin dist/assets/**/* --out-dir=dist/assets",
 		"build:logo": "mkdirp dist/assets && ncp assets/logo/ dist/assets",
 		"build": "npm-run-all --parallel build:*",
-				"deploy": "gh-pages -d dist"
+		"deploy": "gh-pages -d dist"
 
 	},
 	"author": "Irina Illustrova",
